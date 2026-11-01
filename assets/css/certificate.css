@@ -1,0 +1,53 @@
+/* Course certificate (front end). Theme-friendly: inherits fonts, colours via custom properties. */
+.dev3lm-cert {
+	--dev3lm-cert-ink: currentColor;
+	--dev3lm-cert-accent: #8a6d1f;
+	--dev3lm-cert-paper: #fffdf7;
+	--dev3lm-cert-rule: #d9c48f;
+	margin: 1.5em auto;
+	max-width: 760px;
+	font: inherit;
+}
+.dev3lm-cert__frame {
+	background: var(--dev3lm-cert-paper);
+	color: #1f2328;
+	border: 2px solid var(--dev3lm-cert-rule);
+	outline: 6px double var(--dev3lm-cert-rule);
+	outline-offset: -14px;
+	border-radius: 6px;
+	padding: clamp(28px, 7vw, 64px) clamp(20px, 6vw, 56px);
+	text-align: center;
+	box-sizing: border-box;
+}
+.dev3lm-cert__frame p { margin: 0 0 0.6em; }
+.dev3lm-cert__eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8em; color: #5c5240; }
+.dev3lm-cert__title { margin: 0.2em 0 0.8em; font-size: clamp(1.5em, 5vw, 2.3em); line-height: 1.2; color: var(--dev3lm-cert-accent); }
+.dev3lm-cert__name { font-size: clamp(1.4em, 5vw, 2em); font-weight: 700; border-bottom: 1px solid var(--dev3lm-cert-rule); display: inline-block; padding: 0 0.6em 0.15em; }
+.dev3lm-cert__course { font-size: 1.15em; font-weight: 600; margin-top: 0.4em; }
+.dev3lm-cert__body { max-width: 34em; margin: 0.8em auto; line-height: 1.6; }
+.dev3lm-cert__date { font-size: 0.9em; color: #5c5240; margin-top: 1.2em; }
+.dev3lm-cert__preview { font-size: 0.8em; background: #fff4d6; color: #5b4300; border-radius: 4px; padding: 0.4em 0.8em; display: inline-block; }
+.dev3lm-cert__actions { text-align: center; margin-top: 1em; }
+.dev3lm-cert .dev3lm-cert__print:not(#dev3lm-x) {
+	min-height: 44px;
+	padding: 0.6em 1.2em;
+	font: inherit;
+	cursor: pointer;
+	border-radius: 6px;
+	border: 1px solid currentColor;
+	background: transparent;
+	color: inherit;
+	line-height: 1.2;
+	text-transform: none;
+	box-shadow: none;
+}
+.dev3lm-cert .dev3lm-cert__print:not(#dev3lm-x):focus-visible { outline: 3px solid var(--dev3lm-cert-accent); outline-offset: 2px; }
+.dev3lm-cert-note { padding: 0.8em 1em; border-left: 4px solid var(--dev3lm-cert-rule, #d9c48f); background: rgba(0, 0, 0, 0.03); }
+.dev3lm-callout { padding: 0.9em 1.1em; border-left: 4px solid #4f7cff; background: rgba(79, 124, 255, 0.08); border-radius: 4px; }
+.dev3lm-pager { font-size: 0.95em; }
+@media print {
+	body * { visibility: hidden; }
+	.dev3lm-cert, .dev3lm-cert * { visibility: visible; }
+	.dev3lm-cert { position: absolute; inset: 0; margin: 0; max-width: none; }
+	.dev3lm-cert__actions, .dev3lm-cert__preview { display: none; }
+}

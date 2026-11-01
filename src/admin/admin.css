@@ -1,0 +1,134 @@
+/* DEV3 AI Course Builder admin (on top of the core UI kit). Scoped to .dev3lm-root. */
+.dev3lm-root .dev3lm-muted { color: var(--dev3lm-text-muted); margin: 0; }
+.dev3lm-root .dev3lm-small { font-size: 12px; }
+.dev3lm-root .dev3lm-inline-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.dev3lm-root .dev3lm-header-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: flex-end; }
+.dev3lm-root .dev3lm-save-state { font-size: 12px; color: var(--dev3lm-text-muted); white-space: nowrap; }
+.dev3lm-root .dev3lm-tabs-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.dev3lm-root .dev3lm-mono textarea, .dev3lm-root textarea.dev3lm-mono, .dev3lm-root .dev3lm-mono .dev3lm-ui-input { font-family: var(--dev3lm-mono); font-size: 13px; line-height: 1.55; }
+.dev3lm-root .dev3lm-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.dev3lm-root .dev3lm-fieldset > legend { font-weight: 600; font-size: 13px; color: var(--dev3lm-text); margin-bottom: 8px; padding: 0; }
+.dev3lm-root .dev3lm-checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px 16px; }
+.dev3lm-root .dev3lm-linkbtn { background: none; border: 0; padding: 2px 0; color: var(--dev3lm-brand); cursor: pointer; text-align: left; font: inherit; text-decoration: underline; }
+.dev3lm-root .dev3lm-linkbtn:focus-visible { outline: 2px solid var(--dev3lm-focus); outline-offset: 2px; border-radius: 2px; }
+.dev3lm-root .dev3lm-label { font-weight: 600; font-size: 13px; }
+.dev3lm-root .dev3lm-rot-up svg { transform: rotate(90deg); }
+.dev3lm-root .dev3lm-rot-down svg { transform: rotate(90deg); }
+
+/* Start tiles */
+.dev3lm-root .dev3lm-start { display: grid; grid-template-columns: 40px 1fr; grid-template-rows: auto auto; column-gap: 12px; padding: 16px; border: 1px solid var(--dev3lm-border); border-radius: var(--dev3lm-radius); color: var(--dev3lm-text); text-decoration: none; background: var(--dev3lm-surface); min-height: 44px; transition: border-color .15s, background .15s; }
+.dev3lm-root .dev3lm-start:hover { border-color: var(--dev3lm-brand-line); background: var(--dev3lm-brand-soft); }
+.dev3lm-root .dev3lm-start:focus-visible { outline: 2px solid var(--dev3lm-focus); outline-offset: 2px; }
+.dev3lm-root .dev3lm-start__icon { grid-row: 1 / span 2; width: 40px; height: 40px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: var(--dev3lm-brand-soft); color: var(--dev3lm-brand-ink); }
+.dev3lm-root .dev3lm-start__title { font-weight: 600; }
+.dev3lm-root .dev3lm-start__text { font-size: 13px; color: var(--dev3lm-text-muted); }
+
+/* LMS list */
+.dev3lm-root .dev3lm-lms-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.dev3lm-root .dev3lm-lms-list li { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--dev3lm-border); }
+.dev3lm-root .dev3lm-lms-list li:last-child { border-bottom: 0; }
+.dev3lm-root .dev3lm-lms-list__name { font-weight: 600; min-width: 0; }
+.dev3lm-root .dev3lm-lms-list__meta { flex-basis: 100%; font-size: 12px; color: var(--dev3lm-text-muted); }
+
+/* Outline preview / drafts */
+.dev3lm-root .dev3lm-outline { border: 1px solid var(--dev3lm-border); border-radius: var(--dev3lm-radius); padding: 16px; background: var(--dev3lm-surface); }
+.dev3lm-root .dev3lm-outline__head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.dev3lm-root .dev3lm-outline__title { font-weight: 700; font-size: 15px; margin: 0; overflow-wrap: anywhere; }
+.dev3lm-root .dev3lm-outline__counts { display: flex; flex-wrap: wrap; gap: 4px; }
+.dev3lm-root .dev3lm-outline__desc { color: var(--dev3lm-text-muted); margin: 8px 0 0; }
+.dev3lm-root .dev3lm-outline__sections { margin: 12px 0 0 20px; padding: 0; display: grid; gap: 8px; }
+.dev3lm-root .dev3lm-outline__section { font-weight: 600; }
+.dev3lm-root .dev3lm-outline__lessons { margin: 4px 0 0 20px; padding: 0; list-style: lower-alpha; color: var(--dev3lm-text); font-size: 13px; }
+.dev3lm-root .dev3lm-outline__quiz { display: inline-block; margin-top: 4px; font-size: 12px; color: var(--dev3lm-brand-ink); background: var(--dev3lm-brand-soft); border-radius: 999px; padding: 2px 8px; }
+.dev3lm-root .dev3lm-draft { border: 1px solid var(--dev3lm-brand-line); background: var(--dev3lm-surface-2); border-radius: var(--dev3lm-radius); padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.dev3lm-root .dev3lm-draft__head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.dev3lm-root .dev3lm-draft__title { font-weight: 600; margin: 0; }
+.dev3lm-root .dev3lm-file { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.dev3lm-root .dev3lm-file__name { margin: 0; overflow-wrap: anywhere; }
+.dev3lm-root .dev3lm-preview { display: grid; gap: 8px; }
+
+/* Builder layout */
+.dev3lm-root .dev3lm-builder { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 960px) {
+	.dev3lm-root .dev3lm-builder { grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); }
+}
+.dev3lm-root .dev3lm-builder__editor { min-width: 0; scroll-margin-top: 48px; }
+.dev3lm-root .dev3lm-editor { border: 0; margin: 0; padding: 0; min-width: 0; }
+.dev3lm-root .dev3lm-editor:disabled { opacity: .7; }
+
+/* Tree */
+.dev3lm-root .dev3lm-tree__list { list-style: none; margin: 0; padding: 0; }
+.dev3lm-root .dev3lm-tree__row { display: flex; align-items: center; gap: 2px; border-radius: var(--dev3lm-radius-sm); min-height: 40px; }
+.dev3lm-root .dev3lm-tree__row:hover { background: var(--dev3lm-surface-2); }
+.dev3lm-root .dev3lm-tree__row.is-active { background: var(--dev3lm-brand-soft); }
+.dev3lm-root .dev3lm-tree__row.has-error .dev3lm-tree__label { color: var(--dev3lm-danger); }
+.dev3lm-root .dev3lm-tree__row.is-depth-1 { padding-left: 16px; }
+.dev3lm-root .dev3lm-tree__row.is-depth-2 { padding-left: 32px; }
+.dev3lm-root .dev3lm-tree__add.is-depth-1 { padding-left: 12px; }
+.dev3lm-root .dev3lm-tree__row--section { margin-top: 8px; }
+.dev3lm-root .dev3lm-tree__row--section .dev3lm-tree__label { font-weight: 600; }
+.dev3lm-root .dev3lm-tree__select { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 8px; background: none; border: 0; padding: 8px 6px; text-align: left; cursor: pointer; color: var(--dev3lm-text); font: inherit; border-radius: var(--dev3lm-radius-sm); min-height: 40px; }
+.dev3lm-root .dev3lm-tree__select:focus-visible { outline: 2px solid var(--dev3lm-focus); outline-offset: -2px; }
+.dev3lm-root .dev3lm-tree__kind { flex: none; font-size: 10px; text-transform: uppercase; letter-spacing: .04em; color: var(--dev3lm-text-muted); }
+.dev3lm-root .dev3lm-tree__row--lesson .dev3lm-tree__kind, .dev3lm-root .dev3lm-tree__row--topic .dev3lm-tree__kind { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.dev3lm-root .dev3lm-tree__label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dev3lm-root .dev3lm-tree__tools { flex: none; display: inline-flex; gap: 0; }
+@media (hover: hover) {
+	.dev3lm-root .dev3lm-tree__tools { display: none; }
+	.dev3lm-root .dev3lm-tree__row:hover .dev3lm-tree__tools, .dev3lm-root .dev3lm-tree__row.is-active .dev3lm-tree__tools, .dev3lm-root .dev3lm-tree__row:focus-within .dev3lm-tree__tools { display: inline-flex; }
+}
+.dev3lm-root .dev3lm-tree__footer { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--dev3lm-border); }
+.dev3lm-root .dev3lm-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--dev3lm-border-strong); }
+.dev3lm-root .dev3lm-dot--done { background: var(--dev3lm-success); }
+.dev3lm-root .dev3lm-dot--ai { background: var(--dev3lm-ai-from, #7c3aed); box-shadow: 0 0 0 2px var(--dev3lm-brand-soft); }
+
+/* Issues */
+.dev3lm-root .dev3lm-issues { border: 1px solid var(--dev3lm-border); border-radius: var(--dev3lm-radius); background: var(--dev3lm-surface); padding: 8px 16px; }
+.dev3lm-root .dev3lm-issues > summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 32px; }
+.dev3lm-root .dev3lm-issues ul { margin: 8px 0 4px 20px; display: grid; gap: 2px; }
+.dev3lm-root .dev3lm-summary { margin: 0 0 0 20px; display: grid; gap: 2px; }
+
+/* Lesson content */
+.dev3lm-root .dev3lm-content-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.dev3lm-root .dev3lm-preview-box { border: 1px solid var(--dev3lm-border); border-radius: var(--dev3lm-radius); padding: 16px 20px; background: var(--dev3lm-surface); margin-top: 8px; max-height: 560px; overflow: auto; }
+.dev3lm-root .dev3lm-md { line-height: 1.6; overflow-wrap: anywhere; }
+.dev3lm-root .dev3lm-md h3 { font-size: 18px; margin: 1.1em 0 .4em; }
+.dev3lm-root .dev3lm-md h4 { font-size: 15px; margin: 1em 0 .4em; }
+.dev3lm-root .dev3lm-md h5 { font-size: 14px; margin: 1em 0 .4em; }
+.dev3lm-root .dev3lm-md p, .dev3lm-root .dev3lm-md ul, .dev3lm-root .dev3lm-md ol { margin: 0 0 .8em; }
+.dev3lm-root .dev3lm-md ul { list-style: disc; padding-left: 20px; }
+.dev3lm-root .dev3lm-md ol { list-style: decimal; padding-left: 20px; }
+.dev3lm-root .dev3lm-md blockquote { margin: 0 0 .8em; padding: 8px 14px; border-left: 3px solid var(--dev3lm-border-strong); color: var(--dev3lm-text-muted); }
+.dev3lm-root .dev3lm-md pre { background: var(--dev3lm-surface-3); padding: 12px; border-radius: var(--dev3lm-radius-sm); overflow: auto; font-size: 12px; }
+.dev3lm-root .dev3lm-md__callout { padding: 10px 14px; border-left: 3px solid var(--dev3lm-info); background: var(--dev3lm-info-soft); border-radius: var(--dev3lm-radius-sm); }
+.dev3lm-root .dev3lm-details > summary { cursor: pointer; font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+.dev3lm-root .dev3lm-ai-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.dev3lm-root .dev3lm-ai-row > .dev3lm-ui-field { min-width: 180px; flex: 0 1 220px; }
+
+/* Questions */
+.dev3lm-root .dev3lm-questions { display: grid; gap: 8px; min-width: 0; }
+.dev3lm-root .dev3lm-q { border: 1px solid var(--dev3lm-border); border-radius: var(--dev3lm-radius); background: var(--dev3lm-surface); min-width: 0; }
+.dev3lm-root .dev3lm-q.is-open { border-color: var(--dev3lm-brand-line); }
+.dev3lm-root .dev3lm-q__head { display: flex; align-items: center; gap: 6px; padding: 4px 6px 4px 4px; flex-wrap: wrap; }
+.dev3lm-root .dev3lm-q__toggle { flex: 1 1 200px; min-width: 0; display: flex; gap: 10px; align-items: center; background: none; border: 0; padding: 8px; text-align: left; cursor: pointer; font: inherit; color: var(--dev3lm-text); min-height: 40px; border-radius: var(--dev3lm-radius-sm); }
+.dev3lm-root .dev3lm-q__toggle:focus-visible { outline: 2px solid var(--dev3lm-focus); outline-offset: -2px; }
+.dev3lm-root .dev3lm-q__num { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--dev3lm-surface-3); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; }
+.dev3lm-root .dev3lm-q__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dev3lm-root .dev3lm-q__tools { display: inline-flex; margin-left: auto; }
+.dev3lm-root .dev3lm-q__body { display: grid; gap: 12px; padding: 4px 16px 16px; border-top: 1px solid var(--dev3lm-border); padding-top: 12px; }
+.dev3lm-root .dev3lm-q__row { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.dev3lm-root .dev3lm-answers { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 8px; }
+.dev3lm-root .dev3lm-answers__row { display: flex; gap: 8px; align-items: center; }
+.dev3lm-root .dev3lm-answers__row > .dev3lm-ui-field { flex: 1 1 0; min-width: 0; margin: 0; }
+.dev3lm-root .dev3lm-answers__row > .dev3lm-ui-check, .dev3lm-root .dev3lm-answers__row > label { flex: none; }
+.dev3lm-root .dev3lm-questions__add { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.dev3lm-root .dev3lm-questions__add > .dev3lm-ui-field { flex: 0 1 220px; margin: 0; }
+
+/* Lists / filters */
+.dev3lm-root .dev3lm-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.dev3lm-root .dev3lm-filters > * { flex: 1 1 200px; min-width: 0; margin: 0; }
+.dev3lm-root .dev3lm-filters--card { padding: 16px; border-bottom: 1px solid var(--dev3lm-border); }
+.dev3lm-root .dev3lm-row-actions { display: inline-flex; gap: 2px; }
+.dev3lm-root .dev3lm-picked__title { font-weight: 600; font-size: 15px; margin: 0 0 4px; overflow-wrap: anywhere; }
+/* Visually hidden text inside scrollers needs a positioned ancestor (no horizontal scroll). */
+.dev3lm-root .dev3lm-tree__select, .dev3lm-root .dev3lm-header-actions, .dev3lm-root .dev3lm-inline-actions { position: relative; }

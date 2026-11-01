@@ -1,0 +1,3086 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Course Builder for LearnDash & Tutor LMS 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-course-builder\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T05:08:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-course-builder\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-course-builder.php
+msgid "DEV3 AI Course Builder for LearnDash & Tutor LMS"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-course-builder.php
+msgid "https://dev3.tech/item/dev3-ai-course-builder"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-course-builder.php
+msgid "AI course builder for LearnDash, Tutor LMS or plain pages: outline, lessons, quizzes and certificate text from a topic, outline or PDF/DOCX, reviewed before anything is created."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-course-builder.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-course-builder.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:41
+msgid "DEV3 AI Courses"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:72
+#: build/admin.js:2
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Row_Actions.php:47
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Rewrite with DEV3 AI"
+msgstr ""
+
+#: includes/Admin/Row_Actions.php:48
+msgid "Quiz with DEV3 AI"
+msgstr ""
+
+#: includes/Ai/Generator.php:154
+msgid "That lesson no longer exists in this course."
+msgstr ""
+
+#: includes/Ai/Generator.php:194
+msgid "DEV3 AI returned an empty lesson. Try again."
+msgstr ""
+
+#: includes/Ai/Generator.php:209
+msgid "There is not enough lesson text to write questions from. Write or generate the lesson content first."
+msgstr ""
+
+#: includes/Ai/Generator.php:249
+msgid "DEV3 AI returned no usable questions. Try again or choose other question types."
+msgstr ""
+
+#: includes/Ai/Generator.php:344
+msgid "this course"
+msgstr ""
+
+#. translators: 1: course title, 2: number of sections, 3: number of lessons
+#: includes/Ai/Generator.php:348
+#, php-format
+msgid "%1$s is a step-by-step course in %2$d sections and %3$d lessons."
+msgstr ""
+
+#. translators: %s: list of section titles
+#: includes/Ai/Generator.php:351
+#, php-format
+msgid "You will work through: %s."
+msgstr ""
+
+#: includes/Ai/Generator.php:354
+msgid "Short quizzes help you check what you learned along the way."
+msgstr ""
+
+#. translators: %s: course title
+#: includes/Ai/Generator.php:359
+#, php-format
+msgid "Learn %s step by step, with practical lessons and quizzes."
+msgstr ""
+
+#: includes/Ai/Generator.php:361
+#: includes/Front/Certificate.php:168
+msgid "Certificate of Completion"
+msgstr ""
+
+#: includes/Ai/Generator.php:362
+msgid "This certifies that {learner} has successfully completed {course} on {date}."
+msgstr ""
+
+#: includes/Ai/Generator.php:378
+msgid "Choose how to rewrite the lesson."
+msgstr ""
+
+#: includes/Ai/Generator.php:381
+msgid "This lesson has no text to rewrite yet."
+msgstr ""
+
+#: includes/Ai/Generator.php:410
+msgid "DEV3 AI returned an empty rewrite. Try again."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#. translators: %s: the statement
+#: includes/Course/Basic_Quiz.php:109
+msgid "The lesson states this directly."
+msgstr ""
+
+#. translators: %s: heading text
+#: includes/Course/Basic_Quiz.php:128
+#, php-format
+msgid "In your own words, explain: %s"
+msgstr ""
+
+#: includes/Course/Basic_Quiz.php:129
+msgid "Compare the answer with the section of the lesson under this heading."
+msgstr ""
+
+#: includes/Course/Tree.php:257
+#: build/admin.js:1
+msgid "Give the course a title."
+msgstr ""
+
+#: includes/Course/Tree.php:260
+#: build/admin.js:1
+msgid "Add at least one section with a lesson."
+msgstr ""
+
+#: includes/Course/Tree.php:264
+#: build/admin.js:1
+msgid "A section has no title."
+msgstr ""
+
+#. translators: %s: section title
+#: includes/Course/Tree.php:268
+#, php-format
+msgid "Section \"%s\" has no lessons."
+msgstr ""
+
+#: includes/Course/Tree.php:272
+#: build/admin.js:1
+msgid "A lesson has no title."
+msgstr ""
+
+#. translators: %s: lesson title
+#: includes/Course/Tree.php:275
+#, php-format
+msgid "Lesson \"%s\" has no content yet."
+msgstr ""
+
+#. translators: %s: lesson title
+#: includes/Course/Tree.php:279
+#, php-format
+msgid "Review the DEV3 AI draft of \"%s\"."
+msgstr ""
+
+#: includes/Course/Tree.php:283
+msgid "A topic has no title."
+msgstr ""
+
+#: includes/Course/Tree.php:308
+#: includes/Lms/LearnDash.php:216
+#: includes/Lms/Pages.php:145
+#: includes/Lms/Pages.php:388
+#: includes/Lms/Tutor.php:237
+#: build/admin.js:1
+msgid "Quiz"
+msgstr ""
+
+#. translators: %s: quiz title
+#: includes/Course/Tree.php:311
+#, php-format
+msgid "\"%s\" has no questions (it will be skipped)."
+msgstr ""
+
+#. translators: %s: quiz title
+#: includes/Course/Tree.php:317
+#, php-format
+msgid "A choice question in \"%s\" needs at least two answers and a correct one."
+msgstr ""
+
+#. translators: %s: quiz title
+#: includes/Course/Tree.php:321
+#, php-format
+msgid "A question in \"%s\" has no answers."
+msgstr ""
+
+#. translators: %s: section title
+#. translators: %s: lesson title
+#. translators: %s: section
+#. translators: %s: lesson
+#: includes/Course/Tree.php:502
+#: includes/Rest/Tools_Controller.php:242
+#: build/admin.js:1
+#: build/admin.js:2
+#, php-format,js-format
+msgid "Quiz: %s"
+msgstr ""
+
+#. translators: %s: lesson title
+#. translators: %s: lesson
+#: includes/Course/Tree.php:508
+#: build/admin.js:1
+#, php-format,js-format
+msgid "Check: %s"
+msgstr ""
+
+#: includes/Course/Tree.php:514
+#: includes/Lms/Tutor.php:210
+#: build/admin.js:2
+msgid "Final assessment"
+msgstr ""
+
+#: includes/Data/Blueprints.php:101
+msgid "Could not save the course draft."
+msgstr ""
+
+#: includes/Front/Certificate.php:155
+msgid "Certificate: choose a course that has certificate text."
+msgstr ""
+
+#: includes/Front/Certificate.php:160
+msgid "Log in to see your certificate."
+msgstr ""
+
+#: includes/Front/Certificate.php:163
+msgid "Complete the course to unlock your certificate."
+msgstr ""
+
+#: includes/Front/Certificate.php:174
+msgid "Preview (only editors see this until the course is completed)"
+msgstr ""
+
+#: includes/Front/Certificate.php:185
+msgid "Print or save as PDF"
+msgstr ""
+
+#: includes/Lms/Adapter.php:246
+msgid "What you will learn"
+msgstr ""
+
+#: includes/Lms/Adapter.php:249
+msgid "Requirements"
+msgstr ""
+
+#: includes/Lms/Adapters.php:84
+msgid "Unknown LMS target."
+msgstr ""
+
+#. translators: %s: LMS name
+#: includes/Lms/Adapters.php:88
+#, php-format
+msgid "%s is not active on this site. Activate it or choose another target."
+msgstr ""
+
+#: includes/Lms/Pages.php:37
+msgid "WordPress pages (no LMS)"
+msgstr ""
+
+#: includes/Lms/Pages.php:165
+#: build/admin.js:1
+#: build/blocks.js:1
+msgid "Certificate"
+msgstr ""
+
+#: includes/Lms/Pages.php:184
+#: includes/Source/Outline_Parser.php:82
+#: includes/Source/Outline_Parser.php:257
+msgid "Course content"
+msgstr ""
+
+#: includes/Lms/Pages.php:217
+msgid "Your certificate"
+msgstr ""
+
+#: includes/Lms/Pages.php:232
+msgid "Course overview"
+msgstr ""
+
+#. translators: %d: question number
+#: includes/Lms/Pages.php:272
+#: build/admin.js:1
+#, php-format,js-format
+msgid "Question %d"
+msgstr ""
+
+#: includes/Lms/Pages.php:298
+msgid "Match:"
+msgstr ""
+
+#: includes/Lms/Pages.php:313
+msgid "Answer:"
+msgstr ""
+
+#: includes/Lms/Pages.php:321
+msgid "Show guidance"
+msgstr ""
+
+#: includes/Lms/Pages.php:321
+msgid "Show answer"
+msgstr ""
+
+#. translators: %s: lesson title
+#: includes/Lms/Pages.php:383
+#, php-format
+msgid "Back to: %s"
+msgstr ""
+
+#: includes/Lms/Tutor.php:353
+msgid "Fill in the blanks"
+msgstr ""
+
+#: includes/Lms/Tutor.php:417
+msgid "This lesson is not inside a Tutor LMS topic, so the quiz has nowhere to go."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:136
+msgid "Paste an outline first."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:160
+#: build/admin.js:2
+msgid "That file is not a DEV3 course export."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:165
+#: build/admin.js:1
+msgid "Untitled course"
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:170
+msgid "Describe the course topic first."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:205
+#: includes/Rest/Blueprint_Controller.php:241
+#: includes/Service/Builder.php:115
+#: includes/Service/Builder.php:379
+#: includes/Service/Content_Job.php:44
+#: includes/Service/Content_Job.php:84
+msgid "Course draft not found."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:266
+msgid "The course is being created right now. Wait until it finishes."
+msgstr ""
+
+#. translators: %s: course title
+#: includes/Rest/Blueprint_Controller.php:307
+#, php-format
+msgid "%s (copy)"
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:397
+msgid "That quiz no longer exists in this course."
+msgstr ""
+
+#: includes/Rest/Blueprint_Controller.php:411
+msgid "Not enough lesson text for basic questions. Write the lessons first or add questions by hand."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:78
+msgid "Choose a lesson first."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:81
+msgid "You cannot edit this lesson."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:198
+msgid "Not enough lesson text for basic questions. Add questions by hand."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:237
+msgid "No LMS handles this lesson type."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:248
+msgid "Add at least one question."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:312
+msgid "The rewritten lesson is empty."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:357
+msgid "Nothing to undo."
+msgstr ""
+
+#: includes/Rest/Tools_Controller.php:364
+msgid "The lesson was edited after this rewrite. Undo anyway to restore the older version?"
+msgstr ""
+
+#: includes/Service/Builder.php:124
+msgid "This course was already created. Undo the build first to create it again."
+msgstr ""
+
+#: includes/Service/Builder.php:185
+msgid "Course draft or LMS adapter missing."
+msgstr ""
+
+#: includes/Service/Builder.php:243
+msgid "Skipped: the course itself was not created."
+msgstr ""
+
+#: includes/Service/Builder.php:267
+msgid "This item was removed from the course draft."
+msgstr ""
+
+#: includes/Service/Builder.php:296
+msgid "Skipped: its section was not created."
+msgstr ""
+
+#: includes/Service/Builder.php:299
+msgid "Skipped: its lesson was not created."
+msgstr ""
+
+#: includes/Service/Content_Job.php:47
+msgid "DEV3 AI is off or no API key is set. Write the lessons yourself, or connect DEV3 AI in API Config."
+msgstr ""
+
+#: includes/Service/Content_Job.php:64
+msgid "Every lesson already has content."
+msgstr ""
+
+#: includes/Source/Extractor.php:37
+msgid "Upload a PDF, DOCX, TXT or Markdown file first."
+msgstr ""
+
+#: includes/Source/Extractor.php:40
+msgid "You cannot use that file."
+msgstr ""
+
+#: includes/Source/Extractor.php:47
+msgid "Use a PDF, DOCX, TXT or Markdown (.md) file."
+msgstr ""
+
+#: includes/Source/Extractor.php:50
+#: includes/Source/Extractor.php:100
+msgid "The uploaded file could not be read."
+msgstr ""
+
+#: includes/Source/Extractor.php:54
+msgid "The file is larger than 15 MB. Split it or use a lighter PDF."
+msgstr ""
+
+#: includes/Source/Extractor.php:131
+msgid "This DOCX file could not be opened. Save it again from Word or Google Docs, or paste the outline instead."
+msgstr ""
+
+#. translators: %s: course topic
+#: includes/Source/Outline_Parser.php:380
+#, php-format
+msgid "Getting started with %s"
+msgstr ""
+
+#. translators: %s: course topic
+#: includes/Source/Outline_Parser.php:382
+#, php-format
+msgid "Core concepts of %s"
+msgstr ""
+
+#. translators: %s: course topic
+#: includes/Source/Outline_Parser.php:384
+#, php-format
+msgid "%s in practice"
+msgstr ""
+
+#. translators: %s: course topic
+#: includes/Source/Outline_Parser.php:386
+#, php-format
+msgid "Going further with %s"
+msgstr ""
+
+#. translators: %s: course topic
+#: includes/Source/Outline_Parser.php:388
+#, php-format
+msgid "Mastering %s"
+msgstr ""
+
+#. translators: %d: section number
+#: includes/Source/Outline_Parser.php:398
+#, php-format
+msgid "Section %d"
+msgstr ""
+
+#. translators: 1: section number, 2: lesson number
+#: includes/Source/Outline_Parser.php:402
+#, php-format
+msgid "Lesson %1$d.%2$d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background job"
+msgstr ""
+
+#. translators: 1: processed, 2: total, 3: percent
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s processed (%3$s%%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Starting…"
+msgstr ""
+
+#. translators: %s: failed count
+#: build/admin.js:1
+#, js-format
+msgid "%s failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Retry failed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show failed items"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3LM_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3LM_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Single choice"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Multiple choice"
+msgstr ""
+
+#: build/admin.js:1
+msgid "True / false"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fill in the blank"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Short answer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Essay / open ended"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Ordering"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Matching"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All levels"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Beginner"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Intermediate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Expert"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Friendly"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Professional"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Academic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Conversational"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Motivational"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Short (300-450 words)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Medium (600-900 words)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Long (1,200-1,600 words)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No quizzes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "One quiz per section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "One quiz per lesson"
+msgstr ""
+
+#: build/admin.js:1
+msgid "One final quiz"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Creating…"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-detect"
+msgstr ""
+
+#: build/admin.js:1
+msgid "not active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "From a topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Describe the course and DEV3 AI drafts sections, lessons and quizzes."
+msgstr ""
+
+#: build/admin.js:1
+msgid "From an outline"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Paste headings or bullets. Works without AI, too."
+msgstr ""
+
+#: build/admin.js:1
+msgid "From a PDF or DOCX"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upload notes, a book chapter or slides exported as PDF."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Course"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "(untitled)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lessons"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Updated"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Dashboard"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn a topic, an outline or a document into a complete course, review it, then create it in your LMS."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "New course"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Google Gemini API key to draft outlines, lessons and quizzes. Everything else (outline import, the course editor and creating courses) already works without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course drafts"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Courses created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lessons created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lesson rewrites"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start a course"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing is created in your LMS until you review the course tree and click Create."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your LMS"
+msgstr ""
+
+#. translators: %s: LMS name
+#: build/admin.js:1
+#, js-format
+msgid "New courses go to %s unless you choose another target."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Ready"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sections, lessons, topics, quizzes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Topics, lessons, quizzes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "certificate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tools for existing lessons"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write a quiz from any lesson you already have, or rewrite a lesson: simpler, longer, with examples, another tone or another language."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Quiz generator"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Lesson rewriter"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent courses"
+msgstr ""
+
+#: build/admin.js:1
+msgid "View all"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "No courses yet"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Start from a topic, an outline or a document."
+msgstr ""
+
+#: build/admin.js:1
+msgid "(untitled course)"
+msgstr ""
+
+#. translators: %d: sections
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "%d sections"
+msgstr ""
+
+#. translators: %d: lessons
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "%d lessons"
+msgstr ""
+
+#. translators: %d: topics
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "%d topics"
+msgstr ""
+
+#. translators: %d: quizzes
+#: build/admin.js:1
+#, js-format
+msgid "%d quizzes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(untitled section)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(untitled lesson)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "has text"
+msgstr ""
+
+#. translators: %d: more lessons
+#: build/admin.js:1
+#, js-format
+msgid "…and %d more"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Outline"
+msgstr ""
+
+#: build/admin.js:1
+msgid "PDF / DOCX"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pick a source and the shape of the course. You review the whole course tree before anything is created in your LMS."
+msgstr ""
+
+#: build/admin.js:1
+msgid "1. Source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Optional. DEV3 AI suggests one when it is empty."
+msgstr ""
+
+#: build/admin.js:1
+msgid "What is the course about?"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. A practical beginner course on brewing great coffee at home: beans, grinding, pour-over, espresso basics and milk."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Learning goals (optional)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use # for the course title, ## for sections and ### for lessons, or \"Module 1:\" / \"Lesson 1:\" lines, or indented bullets. Text under a heading becomes lesson content. A \"Quiz\" heading with questions ending in \"?\" becomes a quiz."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Insert an example"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose course material"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use this file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose another file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upload or choose a file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "PDF, DOCX, TXT or Markdown, up to 15 MB. Scanned PDFs need DEV3 AI (it reads the pages)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Preview structure"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No text found in this file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "It is probably a scanned PDF. Generate the outline with DEV3 AI, which reads the pages, or paste the outline instead."
+msgstr ""
+
+#. translators: %d: words
+#: build/admin.js:1
+#, js-format
+msgid "Found %d words. This is the structure without AI:"
+msgstr ""
+
+#: build/admin.js:1
+msgid "2. Course shape"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Defaults come from Settings."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Create in"
+msgstr ""
+
+#. translators: %s: LMS
+#: build/admin.js:1
+#, js-format
+msgid "Target: %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Audience"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. busy beginners"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Level"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Language"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Tone"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Lesson length"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Sections"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Lessons per section"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Topics per lesson"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sub-lessons (LearnDash topics, child pages)."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Quizzes"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Questions per quiz"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Question types"
+msgstr ""
+
+#: build/admin.js:1
+msgid "3. Draft the course"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI is paused (switched off or the monthly budget is reached). You can still build the course without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Google Gemini API key in API Config to generate with DEV3 AI. You can still build the course without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Designing the course… (up to a minute)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate outline with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start from a template"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Build from this source (no AI)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Blank course"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI · Course outline draft"
+msgstr ""
+
+#. translators: %d: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%d tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Outline saved. Review and write the lessons next."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use this outline"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Discard"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Learners write a free answer; it is graded by hand. Put grading guidance in the explanation."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Correct answer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "True"
+msgstr ""
+
+#: build/admin.js:1
+msgid "False"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Answers (choose the correct one)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Answers (tick every correct one)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Missing words, in order"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accepted answers"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Items in the correct order"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pairs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Correct"
+msgstr ""
+
+#. translators: 1: question label, 2: answer number
+#: build/admin.js:1
+#, js-format
+msgid "%1$s answer %2$d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Term"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Answer"
+msgstr ""
+
+#. translators: 1: question label, 2: pair number
+#: build/admin.js:1
+#, js-format
+msgid "%1$s match %2$d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Matches…"
+msgstr ""
+
+#. translators: %d: answer number
+#: build/admin.js:1
+#, js-format
+msgid "Remove answer %d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add answer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No questions yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate them with DEV3 AI or add them by hand."
+msgstr ""
+
+#: build/admin.js:1
+msgid "(no question text)"
+msgstr ""
+
+#. translators: %s: question label
+#: build/admin.js:1
+#, js-format
+msgid "Move %s up"
+msgstr ""
+
+#. translators: %s: question label
+#: build/admin.js:1
+#, js-format
+msgid "Move %s down"
+msgstr ""
+
+#. translators: %s: question label
+#. translators: %s: course
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "Delete %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Type"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Points"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Question"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write {blank} where each missing word goes, e.g. \"Water boils at {blank} degrees Celsius.\""
+msgstr ""
+
+#: build/admin.js:1
+msgid "Explanation (shown after answering)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "New question type"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add question"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Description"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Excerpt"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Learning outcomes (one per line)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Certificate title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Certificate text"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course details"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Shown on the course page. Blank lines start new paragraphs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Duration (minutes)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requirements (one per line)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Created as a LearnDash certificate and linked to the course."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Printed by the Course Certificate block for learners who completed the course."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Placeholders: {learner}, {course}, {date}, {site}."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Description, excerpt, outcomes and certificate text from the course structure."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write description & certificate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use a template (no AI)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Template draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Becomes a Tutor LMS topic."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Becomes a section heading in the course."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Quiz at the end of this section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "LearnDash has no section quizzes: it is added after the last lesson of the section."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add lesson"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Lesson"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Topic title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lesson title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary / key points"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Guides DEV3 AI when it writes the content."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Written by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mark as reviewed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Read and edit this lesson before you create the course."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Content"
+msgstr ""
+
+#. translators: %d: words
+#: build/admin.js:1
+#: build/admin.js:2
+#, js-format
+msgid "%d words"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Content view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lesson content"
+msgstr ""
+
+#: build/admin.js:1
+msgid "## heading, - list, 1. numbered list, > quote, \"> Tip: …\" callout, ``` code, **bold**, *italic*. Becomes native blocks."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing to preview yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "New topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lesson quiz"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write this lesson with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Uses the course outline, this summary and your source material."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Length"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Writing…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use this lesson"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Preview the draft"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Quiz title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Passing grade (%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Instructions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate questions with DEV3 AI"
+msgstr ""
+
+#. translators: %s: list of question types
+#: build/admin.js:1
+#, js-format
+msgid "From the lesson content. Types: %s."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Questions"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Basic questions (no AI)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Basic questions draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI · Questions draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check every answer. Edit or delete questions before you add them."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add to quiz"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use these questions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace existing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Select an item in the course structure to edit it."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit item"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No content yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft, not reviewed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Has content"
+msgstr ""
+
+#. translators: %s: item kind
+#: build/admin.js:1
+#, js-format
+msgid "(untitled %s)"
+msgstr ""
+
+#. translators: %s: item title
+#: build/admin.js:1
+#, js-format
+msgid "Move up: %s"
+msgstr ""
+
+#. translators: %s: item title
+#: build/admin.js:1
+#, js-format
+msgid "Move down: %s"
+msgstr ""
+
+#. translators: %s: item title
+#: build/admin.js:1
+#, js-format
+msgid "Delete: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course structure"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add final quiz"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft (review in the LMS first)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Published"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Pending review"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Private"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course draft saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "A choice question needs two answers and a correct one."
+msgstr ""
+
+#: build/admin.js:1
+msgid "A question has no text."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Quiz has no questions (it will be skipped)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "No content yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft not reviewed yet."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "New lesson"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Course builder"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:2
+msgid "Courses"
+msgstr ""
+
+#. translators: 1: sections, 2: lessons, 3: written lessons, 4: quizzes, 5: questions
+#: build/admin.js:2
+#, js-format
+msgid "%1$d sections · %2$d lessons (%3$d written) · %4$d quizzes · %5$d questions"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Saving…"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Unsaved changes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All changes saved"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Export"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Create course"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Creating the course"
+msgstr ""
+
+#. translators: %s: LMS
+#: build/admin.js:2
+#, js-format
+msgid "Creating in %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Course created"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit in LMS"
+msgstr ""
+
+#: build/admin.js:2
+msgid "View course"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Undo build"
+msgstr ""
+
+#. translators: %d: failed items
+#: build/admin.js:2
+#, js-format
+msgid "Created with %d skipped items (see the job details). Later changes here are not synced: undo the build to create it again."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Everything was created. Later changes here are not synced: undo the build to create it again."
+msgstr ""
+
+#: build/admin.js:2
+msgid "The course could not be created"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Clean up and try again"
+msgstr ""
+
+#: build/admin.js:2
+msgid "See the job details."
+msgstr ""
+
+#: build/admin.js:2
+msgid "DEV3 AI is writing the lessons"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Editing is paused until it finishes. Every lesson stays a draft for you to review."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Drafting lessons"
+msgstr ""
+
+#. translators: %d: errors
+#: build/admin.js:2
+#, js-format
+msgid "%d to fix"
+msgstr ""
+
+#. translators: %d: warnings
+#: build/admin.js:2
+#, js-format
+msgid "%d to review"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Checks before creating the course"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Structure"
+msgstr ""
+
+#. translators: %d: empty lessons
+#: build/admin.js:2
+#, js-format
+msgid "Write %d lessons"
+msgstr ""
+
+#: build/admin.js:2
+msgid "this item"
+msgstr ""
+
+#. translators: %s: item title
+#: build/admin.js:2
+#, js-format
+msgid "Delete \"%s\" from the course draft?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "New section"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Editor"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Create this course?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "A background job creates everything in order. You can undo the build afterwards."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Status of created items"
+msgstr ""
+
+#. translators: %d: topics
+#: build/admin.js:2
+#, js-format
+msgid "%d topics (created as lessons)"
+msgstr ""
+
+#. translators: 1: quizzes, 2: questions
+#: build/admin.js:2
+#, js-format
+msgid "%1$d quizzes with %2$d questions"
+msgstr ""
+
+#. translators: %d: warnings
+#: build/admin.js:2
+#, js-format
+msgid "%d items still need review (empty lessons get their summary as content; empty quizzes are skipped)."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Undo the build?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Everything this course draft created (course, sections, lessons, quizzes, certificate) is moved to the trash. The draft stays, so you can create it again."
+msgstr ""
+
+#. translators: %d: number of items
+#: build/admin.js:2
+#, js-format
+msgid "Build undone: %d items removed."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Delete permanently"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Move to trash"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Delete permanently instead (also removes quiz questions)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All statuses"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Drafts"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Creating"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Target"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Size"
+msgstr ""
+
+#. translators: 1: sections, 2: lessons, 3: quizzes
+#: build/admin.js:2
+#, js-format
+msgid "%1$d sections · %2$d lessons · %3$d quizzes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Source"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Course drafts and the courses they created."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Import JSON"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Search courses"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Search courses…"
+msgstr ""
+
+#. translators: %s: course
+#: build/admin.js:2
+#, js-format
+msgid "Duplicate %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Course draft duplicated."
+msgstr ""
+
+#. translators: %s: course
+#: build/admin.js:2
+#, js-format
+msgid "Export %s as JSON"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Delete this course draft?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "The course created in your LMS stays. Only the draft is deleted (undo the build first to remove the course too)."
+msgstr ""
+
+#: build/admin.js:2
+msgid "The draft and its lesson texts are deleted."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Course draft deleted."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Delete draft"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Change"
+msgstr ""
+
+#. translators: %s: course title
+#: build/admin.js:2
+#, js-format
+msgid "in %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit lesson"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Words"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Search lessons"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Search lessons…"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Lesson type"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All lesson types"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Select"
+msgstr ""
+
+#: build/admin.js:2
+msgid "No lessons found"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Create a course first, or search for another title."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Write a quiz from a lesson you already have. Review every question, then create the quiz next to the lesson."
+msgstr ""
+
+#: build/admin.js:2
+msgid "1. Lesson"
+msgstr ""
+
+#: build/admin.js:2
+msgid "2. Questions"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Number of questions"
+msgstr ""
+
+#: build/admin.js:2
+msgid "This lesson has very little text. Questions work best from a full lesson."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Generate quiz with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Tutor LMS quizzes follow the course status."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Quiz created."
+msgstr ""
+
+#. translators: %s: LMS
+#: build/admin.js:2
+#, js-format
+msgid "Create quiz in %s"
+msgstr ""
+
+#: build/admin.js:2
+msgid "WordPress"
+msgstr ""
+
+#. translators: 1: quiz title, 2: number of questions
+#: build/admin.js:2
+#, js-format
+msgid "\"%1$s\" created with %2$d questions"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Edit quiz"
+msgstr ""
+
+#: build/admin.js:2
+msgid "View"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Simplify for beginners"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Expand with more detail"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Add examples and an exercise"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Make it shorter"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Fix grammar and clarity"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Change the tone"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Change the reading level"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Translate"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Rewrite undone."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Manual edit"
+msgstr ""
+
+#: build/admin.js:2
+msgid "When"
+msgstr ""
+
+#: build/admin.js:2
+msgid "State"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Undone"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Applied"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Rewrite an existing lesson with DEV3 AI. Compare the changes, edit, then save it as native blocks. Every rewrite can be undone."
+msgstr ""
+
+#: build/admin.js:2
+msgid "2. Rewrite"
+msgstr ""
+
+#: build/admin.js:2
+msgid "How"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reading level"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Target language"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Extra instructions (optional)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Rewriting…"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Lesson updated. You can undo it below."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save to lesson"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Preview the rewritten lesson"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Rewrite history"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Undo"
+msgstr ""
+
+#: build/admin.js:2
+msgid "No rewrites yet"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Saved rewrites appear here and can be undone."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Discard changes"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Defaults for new courses, quizzes and the LMS target."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reset to defaults"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reset settings?"
+msgstr ""
+
+#: build/admin.js:2
+msgid "All options on this page go back to their defaults. Your API key, course drafts and usage history are kept."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Settings reset to defaults."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Reset settings"
+msgstr ""
+
+#: build/admin.js:2
+msgid "LMS"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default target"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Auto-detect uses Tutor LMS, then LearnDash, else WordPress pages."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Quiz passing grade (%)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Create certificate text"
+msgstr ""
+
+#: build/admin.js:2
+msgid "LearnDash: a certificate post linked to the course. Tutor LMS and pages: shown by the Course Certificate block."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Course defaults"
+msgstr ""
+
+#: build/admin.js:2
+msgid "LearnDash topics or child pages."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default question types"
+msgstr ""
+
+#: build/admin.js:2
+msgid "DEV3 AI"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Outline model"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Pro model (best structure)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Default model (faster, cheaper)"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Lessons and quizzes use the default model from API Config."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Max source characters sent"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Longer documents are trimmed to the most relevant parts."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Delete plugin data on uninstall"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Removes course drafts, history and settings. Courses created in your LMS are always kept."
+msgstr ""
+
+#: build/admin.js:2
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:2
+msgid "Connect Google Gemini, pick models and set a monthly AI budget."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:2
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Course Certificate"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Printable certificate for learners who completed a course."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Course ID"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Leave 0 to use the current course (or its parent page)."
+msgstr ""
+
+#: blocks/certificate/block.json
+msgctxt "block title"
+msgid "Course Certificate"
+msgstr ""
+
+#: blocks/certificate/block.json
+msgctxt "block description"
+msgid "Printable certificate for learners who completed a course."
+msgstr ""
+
+#: blocks/certificate/block.json
+msgctxt "block keyword"
+msgid "certificate"
+msgstr ""
+
+#: blocks/certificate/block.json
+msgctxt "block keyword"
+msgid "course"
+msgstr ""
+
+#: blocks/certificate/block.json
+msgctxt "block keyword"
+msgid "lms"
+msgstr ""

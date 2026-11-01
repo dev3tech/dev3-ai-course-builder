@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Course Builder for LearnDash &amp; Tutor LMS · Documentation</title>
+<style>
+:root { --ink:#1f2328; --muted:#57606a; --line:#d0d7de; --brand:#4f46e5; --soft:#eef2ff; --bg:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+header { background:linear-gradient(135deg,#4f46e5,#7c3aed); color:#fff; padding:40px 16px; }
+header .wrap, main { max-width:920px; margin:0 auto; }
+header h1 { margin:0 0 8px; font-size:clamp(24px,4vw,34px); }
+header p { margin:0; opacity:.9; }
+nav { background:var(--soft); padding:12px 16px; position:sticky; top:0; overflow-x:auto; white-space:nowrap; border-bottom:1px solid var(--line); }
+nav a { color:var(--brand); margin-right:16px; text-decoration:none; font-weight:600; font-size:14px; }
+main { padding:16px; }
+h2 { margin-top:40px; padding-top:8px; border-top:1px solid var(--line); }
+h3 { margin-top:24px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:14px; background:#f6f8fa; border-radius:4px; }
+code { padding:1px 5px; }
+pre { padding:12px; overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-size:14px; display:block; overflow-x:auto; }
+th, td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+th { background:#f6f8fa; }
+.note { background:var(--soft); border-left:4px solid var(--brand); padding:12px 16px; border-radius:4px; }
+img { max-width:100%; border:1px solid var(--line); border-radius:6px; }
+.shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+figure { margin:0; } figcaption { font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>DEV3 AI Course Builder for LearnDash &amp; Tutor LMS</h1><p>Version 1.0.0 · by DEV3 Technologies · Topic, outline or PDF/DOCX → reviewed course tree → Tutor LMS, LearnDash or WordPress pages.</p></div></header>
+<nav><a href="#install">Install</a><a href="#key">Gemini key</a><a href="#start">New course</a><a href="#builder">Course builder</a><a href="#create">Create &amp; undo</a><a href="#lms">LMS support</a><a href="#tools">Quiz &amp; rewriter</a><a href="#cert">Certificate</a><a href="#settings">Settings</a><a href="#hooks">Hooks</a><a href="#faq">FAQ</a><a href="#changelog">Changelog</a></nav>
+<main>
+
+<h2 id="install">1. Installation</h2>
+<ol>
+<li>In WordPress go to <strong>Plugins → Add New → Upload Plugin</strong>, choose <code>dev3-ai-course-builder.zip</code> and activate it.</li>
+<li>Optional: activate <strong>Tutor LMS</strong> (free) or <strong>LearnDash</strong>. Without an LMS, courses are created as WordPress pages.</li>
+<li>Open <strong>DEV3 AI Courses</strong> in the admin menu.</li>
+</ol>
+<p>Requirements: WordPress 6.0+, PHP 7.4+ (tested on 8.3). The PHP <code>zip</code> extension is used to read DOCX files.</p>
+
+<h2 id="key">2. Google Gemini API key</h2>
+<ol>
+<li>Visit <a href="https://aistudio.google.com/app/apikey">Google AI Studio</a> and create an API key.</li>
+<li>In <strong>DEV3 AI Courses → API Config</strong>, paste the key and click <em>Validate</em>. The key is stored encrypted and never sent to the browser. You can also define <code>DEV3LM_GEMINI_API_KEY</code> in <code>wp-config.php</code>.</li>
+<li>Pick models (defaults: gemini-2.5-flash for lessons and quizzes, gemini-2.5-pro for outlines), and set a <strong>monthly budget</strong>. When it is reached, DEV3 AI pauses until next month.</li>
+</ol>
+<p class="note">You pay Google for usage; Google offers a free tier. Every feature has a non-AI path, so the plugin stays usable with AI off or without a key.</p>
+
+<h2 id="start">3. Start a new course</h2>
+<p><strong>New course</strong> has three sources:</p>
+<ul>
+<li><strong>Topic</strong>: describe the course (and optional goals). <em>Generate outline with DEV3 AI</em> drafts title, description, outcomes, requirements, sections, lessons (with key points), topics and quiz placeholders. Without AI, <em>Start from a template</em> creates N sections × M lessons to fill in.</li>
+<li><strong>Outline</strong>: paste headings or bullets. <code>#</code> = course title, <code>##</code> = section, <code>###</code> = lesson, <code>####</code> = topic. Also understood: <code>Module 1:</code>/<code>Section</code>/<code>Chapter</code>/<code>Unit</code>/<code>Week</code> lines (sections), <code>Lesson 1:</code> lines, numbered headings like <code>1.2 Title</code> and indented bullets. Text under a heading becomes lesson content. A heading called <em>Quiz</em>, <em>Questions</em> or <em>Assessment</em> starts a quiz: lines ending in <code>?</code> become questions, and <code>- [x] answer</code> / <code>- [ ] answer</code> lines become choices.</li>
+<li><strong>PDF / DOCX</strong>: upload a PDF, DOCX, TXT or Markdown file (up to 15 MB). DOCX headings keep their levels. <em>Preview structure</em> shows how the file reads without AI. With DEV3 AI the text (or, for scanned PDFs, the PDF itself) is the basis for the outline.</li>
+</ul>
+<p>Course shape options: target LMS, audience, level, language, tone, lesson length, sections, lessons per section, topics per lesson, quiz placement (none / per section / per lesson / final), questions per quiz and question types.</p>
+<p>The AI outline appears as a <strong>draft</strong> (“Not saved yet”). Click <em>Use this outline</em>, <em>Regenerate</em> or <em>Discard</em>.</p>
+
+<h2 id="builder">4. The course builder</h2>
+<ul>
+<li><strong>Structure</strong> (left): course, sections, lessons, topics and quizzes. Move items with the arrow buttons (lessons move to the previous/next section at the edges), delete them, add lessons, sections and a final quiz. Dots show lesson state: grey = empty, green = written, purple = DEV3 AI draft not reviewed.</li>
+<li><strong>Course details</strong>: title, description, excerpt, level, audience, duration, outcomes, requirements, certificate title and text. <em>Write description &amp; certificate</em> (DEV3 AI) or <em>Use a template</em> shows a field-by-field draft.</li>
+<li><strong>Lessons and topics</strong>: summary/key points and content. Content uses a simple format that becomes native blocks: <code>## heading</code>, <code>- list</code>, <code>1. list</code>, <code>&gt; quote</code>, <code>&gt; Tip: …</code> callout, <code>```</code> code, <code>**bold**</code>, <code>*italic*</code>, <code>[link](https://…)</code>. <em>Write with DEV3 AI</em> drafts the lesson from the outline, its summary and your source document; compare and accept, edit or reject. <em>Write N lessons</em> drafts every empty lesson in a background job; those lessons are flagged until you click <em>Mark as reviewed</em>.</li>
+<li><strong>Quizzes</strong>: title, passing grade, instructions and questions. Types: single choice, multiple choice, true/false, fill in the blank (<code>{blank}</code> marks each gap), short answer, essay, ordering and matching (only the types the target LMS supports are offered). <em>Generate with DEV3 AI</em> writes questions from the related lessons; questions without a marked correct answer are dropped. <em>Basic questions (no AI)</em> builds fill-in-the-blank, true/false and open questions from the lesson text.</li>
+<li>Changes autosave. <em>Export</em> downloads the course as JSON; <strong>Courses → Import JSON</strong> brings it back on any site.</li>
+<li>The <em>Checks</em> bar lists problems to fix (errors block creation) and items to review.</li>
+</ul>
+
+<h2 id="create">5. Create the course, and undo</h2>
+<p><em>Create course</em> asks for the target and the status of created items (Draft by default), then a background job creates everything in order with a progress bar (cancel, retry failed steps). When done you get <em>Edit in LMS</em> and <em>View course</em> links.</p>
+<p><em>Undo build</em> moves every item the build created to the trash, or deletes it permanently (also removing Tutor quiz questions). The draft stays, so you can create it again, even in another LMS.</p>
+
+<h2 id="lms">6. What is created in each LMS</h2>
+<table>
+<tr><th>Tree</th><th>Tutor LMS</th><th>LearnDash</th><th>WordPress pages</th></tr>
+<tr><td>Course</td><td><code>courses</code> post, level, benefits, requirements, audience, duration, free</td><td><code>sfwd-courses</code></td><td>Parent page with description, outcomes and a table of contents</td></tr>
+<tr><td>Section</td><td>Tutor topic (<code>topics</code>)</td><td>Section heading in the course builder (<code>course_sections</code>)</td><td>Heading in the table of contents</td></tr>
+<tr><td>Lesson</td><td><code>lesson</code> inside the topic</td><td><code>sfwd-lessons</code></td><td>Child page with previous/next links</td></tr>
+<tr><td>Topic</td><td>Next lesson in the same Tutor topic (Tutor has no sub-lessons)</td><td><code>sfwd-topic</code></td><td>Child page of the lesson page</td></tr>
+<tr><td>Quiz</td><td><code>tutor_quiz</code> with questions and answers in Tutor's quiz tables; a final quiz gets its own topic</td><td><code>sfwd-quiz</code> + ProQuiz questions (<code>sfwd-question</code>); section quizzes attach to the section's last lesson</td><td>Self-check page; answers revealed with native Details blocks</td></tr>
+<tr><td>Certificate</td><td>Stored on the course; shown by the Course Certificate block</td><td><code>sfwd-certificates</code> post linked as the course certificate</td><td>Certificate page with the Course Certificate block</td></tr>
+</table>
+<p>Question types map to Tutor's <code>single_choice</code>, <code>multiple_choice</code>, <code>true_false</code>, <code>fill_in_the_blank</code>, <code>short_answer</code>, <code>open_ended</code>, <code>ordering</code>, <code>matching</code> and to LearnDash's <code>single</code>, <code>multiple</code>, <code>cloze_answer</code>, <code>free_answer</code>, <code>essay</code>, <code>sort_answer</code>, <code>matrix_sort_answer</code>.</p>
+
+<h2 id="tools">7. Quiz generator and lesson rewriter</h2>
+<p><strong>Quiz generator</strong>: pick any existing lesson (Tutor lesson, LearnDash lesson or topic, or a page built by the plugin), choose the number and types of questions, generate with DEV3 AI or basic mode, edit, then <em>Create quiz</em>. Tutor: the quiz goes into the lesson's topic right after the lesson. LearnDash: a lesson/topic quiz added to the course steps. Pages: a child quiz page.</p>
+<p><strong>Lesson rewriter</strong>: pick a lesson and how to rewrite it (simplify, expand, add examples, shorten, fix grammar and clarity, change tone, change reading level, translate) plus extra instructions. Compare the changes, edit, then <em>Save to lesson</em> (saved as native blocks). Every saved rewrite appears in <em>Rewrite history</em> with <em>Undo</em>.</p>
+<p>Shortcut: lesson lists in Tutor LMS and LearnDash show <em>Rewrite with DEV3 AI</em> and <em>Quiz with DEV3 AI</em> row actions.</p>
+
+<h2 id="cert">8. Course Certificate block and shortcode</h2>
+<p>Add the <strong>Course Certificate</strong> block (or <code>[dev3lm_certificate course="123"]</code>) to any page. Leave the course empty to use the current course page. Learners see their name, the course title, the date and your certificate text once they completed the course (Tutor LMS / LearnDash completion; for page courses any logged-in learner). Editors see a preview. Placeholders: <code>{learner}</code>, <code>{course}</code>, <code>{date}</code>, <code>{site}</code>. <em>Print or save as PDF</em> prints only the certificate.</p>
+
+<h2 id="settings">9. Settings</h2>
+<p>Default LMS target, status of created items, quiz passing grade, certificate on/off, default language, tone, audience, level, sections, lessons per section, topics per lesson, lesson length, quiz placement, questions per quiz, question types, outline model (pro/default), max source characters sent to DEV3 AI, and delete data on uninstall (courses created in your LMS are always kept).</p>
+
+<h2 id="hooks">10. Developer hooks</h2>
+<table>
+<tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+<tr><td><code>dev3lm_adapters</code></td><td>filter</td><td>Add an LMS adapter: <code>$list['mylms'] = new My_Adapter()</code> (extend <code>Dev3\AiCourseBuilder\Lms\Adapter</code>).</td></tr>
+<tr><td><code>dev3lm_certificate_completed</code></td><td>filter</td><td><code>( bool $completed, int $course_id, int $user_id )</code> who may see a certificate.</td></tr>
+<tr><td><code>dev3lm_prompt</code>, <code>dev3lm_prompt_outline</code>, <code>_lesson</code>, <code>_quiz</code>, <code>_details</code>, <code>_rewrite</code></td><td>filter</td><td>Change any DEV3 AI prompt template, schema or model.</td></tr>
+<tr><td><code>dev3lm_job_finished_dev3lm_build</code></td><td>action</td><td>Runs after a course build finishes (<code>$job</code>).</td></tr>
+<tr><td><code>dev3lm_settings_defaults</code> / <code>dev3lm_settings_sanitize</code></td><td>filter</td><td>Add settings.</td></tr>
+<tr><td><code>dev3lm_ai_guard</code>, <code>dev3lm_model_prices</code>, <code>dev3lm_mask_pii</code></td><td>filter</td><td>Shared DEV3 core: block AI calls, cost table, PII masking.</td></tr>
+</table>
+<p>Created posts carry the meta <code>_dev3lm_blueprint</code> (draft id) and <code>_dev3lm_node</code>; course certificate text is in <code>_dev3lm_certificate</code> (JSON).</p>
+<p>REST namespace: <code>dev3lm/v1</code> (<code>blueprints</code>, <code>blueprints/&lt;id&gt;/outline|lesson|quiz|details|draft-all|build|unbuild</code>, <code>source/parse</code>, <code>lessons</code>, <code>tools/quiz</code>, <code>tools/rewrite</code>, <code>rewrites</code>). All routes need the <code>manage_options</code> capability and a REST nonce.</p>
+
+<h2 id="faq">11. FAQ</h2>
+<h3>Is anything published or created without my review?</h3><p>No. AI results are drafts, and nothing exists in your LMS until you click Create course.</p>
+<h3>LearnDash is not installed. Can I test it?</h3><p>LearnDash is a paid plugin. The adapter uses LearnDash's documented post types, settings API, course-steps model and ProQuiz models.</p>
+<h3>My PDF shows “No text found”.</h3><p>It is a scanned PDF. Generate the outline with DEV3 AI (it reads the pages) or paste the outline.</p>
+<h3>Which data goes to Google?</h3><p>The topic, outline or document text (capped in Settings) and the lesson text you ask DEV3 AI to work on. PII masking from API Config applies. The usage log can be exported and erased with WordPress privacy tools.</p>
+<h3>Where are the courses after I delete the plugin?</h3><p>They stay. Only the plugin's drafts, history and settings are removed when "delete data on uninstall" is on.</p>
+
+<h2>Screenshots</h2>
+<div class="shots">
+<figure><img src="screenshots/1-dashboard.png" alt="Dashboard"><figcaption>Dashboard</figcaption></figure>
+<figure><img src="screenshots/2-ai-outline-draft.png" alt="AI outline draft"><figcaption>DEV3 AI outline draft</figcaption></figure>
+<figure><img src="screenshots/3-course-builder.png" alt="Course builder"><figcaption>Course builder</figcaption></figure>
+<figure><img src="screenshots/4-quiz-generator-mobile.png" alt="Quiz generator on a phone"><figcaption>Quiz generator (mobile)</figcaption></figure>
+<figure><img src="screenshots/5-tutor-course-created.png" alt="Course in Tutor LMS"><figcaption>Created in Tutor LMS</figcaption></figure>
+<figure><img src="screenshots/6-certificate-mobile.png" alt="Certificate"><figcaption>Certificate (mobile)</figcaption></figure>
+</div>
+
+<h2 id="changelog">12. Changelog</h2>
+<p><strong>1.0.0</strong> · Initial release.</p>
+</main>
+</body>
+</html>

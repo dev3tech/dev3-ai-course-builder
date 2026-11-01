@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dev3lm/certificate",
+	"title": "Course Certificate",
+	"category": "widgets",
+	"icon": "awards",
+	"description": "Printable certificate for learners who completed a course.",
+	"keywords": [ "certificate", "course", "lms" ],
+	"textdomain": "dev3-ai-course-builder",
+	"attributes": {
+		"courseId": { "type": "number", "default": 0 }
+	},
+	"supports": { "html": false, "align": [ "wide" ] }
+}
